@@ -1,14 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View, Image} from 'react-native';
 import HomeScreen from './Screens/HomeScreen';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={{color:"red"}}>WomenPower</Text>
-<HomeScreen/>
-      <StatusBar style="auto" />
+    <SafeAreaView style={styles.container}>
+    <View>
+    <Text>Women Power</Text>
+    <Image
+      source={"workout-app/workout-app/assets/Image/Women_P-removebg-preview.png"}
+    />
     </View>
+    </SafeAreaView>
   );
 }
 
@@ -16,7 +19,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    // alignItems: 'center',
-    // justifyContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
