@@ -1,15 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, View, Image} from 'react-native';
+import { SafeAreaView, StyleSheet, handleImagePress,
+   View, Image, TouchableOpacity} from 'react-native';
 import HomeScreen from './Screens/HomeScreen';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
     <View>
-    <Text>Women Power</Text>
-    <Image
-      source={"workout-app/workout-app/assets/Image/Women_P-removebg-preview.png"}
+    <TouchableOpacity onPress={handleImagePress}>
+    <Image 
+    style={{borderRadius: 50,
+    width:100,
+    height: 100, }}
+   
     />
+    </TouchableOpacity>
     </View>
     </SafeAreaView>
   );
