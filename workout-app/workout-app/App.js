@@ -12,7 +12,7 @@ export default function App() {
     style={{borderRadius: 50,
     width:100,
     height: 100, }}
-   
+   source={require('./assets/Image/Women_P-removebg-preview.png')}
     />
     </TouchableOpacity>
     </View>
