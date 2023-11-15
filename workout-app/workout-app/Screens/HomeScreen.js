@@ -1,14 +1,39 @@
-import { StyleSheet } from 'react-native';
-import React from 'react'
+// HomeScreen.js
 
-const HomeScreen = () => {
+import React from 'react';
+import { SafeAreaView, StyleSheet, View, Image, TouchableOpacity } from 'react-native';
+
+const HomeScreen = ({ navigation }) => {
+  const handleImagePress = () => {
+    // Navigate to the 'LandingPage' screen when the button is pressed
+    navigation.navigate('LandingPage');
+  };
+
   return (
-    <View>
-      <Text>HomeScreen</Text>
-    </View>
-  )
+    <SafeAreaView style={styles.container}>
+      <View>
+        <TouchableOpacity onPress={handleImagePress}>
+          <Image 
+            style={{
+              borderRadius: 50,
+              width: 100,
+              height: 100,
+            }}
+            source={require('./assets/Image/Women_P-removebg-preview.png')}
+          />
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
+  );
 }
 
-export default HomeScreen;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
-const styles = StyleSheet.create({})
+export default HomeScreen;
