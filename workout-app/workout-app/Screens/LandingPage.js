@@ -1,20 +1,15 @@
-// LandingPage.js
-
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+import LandingPage from './Screens/Landingpage'
 
 const LandingPage = () => {
   return (
-    <View style={styles.container}>
+    <View>
       <Text>LandingPage</Text>
     </View>
-  );
-};
+  )
+}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
+export default LandingPage
+
+const styles = StyleSheet.create({})
