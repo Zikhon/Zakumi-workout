@@ -1,30 +1,42 @@
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, handleImagePress,
-   View, Image, TouchableOpacity} from 'react-native';
+
+
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import {Image} from 'react-native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './Screens/HomeScreen';
+import LandingPage from './Screens/LandingPage'; 
+import Loginpage from './Screens/Loginpage'; 
+
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-    <View>
-    <TouchableOpacity onPress={handleImagePress}>
-    <Image 
-    style={{borderRadius: 50,
-    width:100,
-    height: 100, }}
-   source={require("./assets/Image/Women_P-removebg-preview.png")}
-    />
-    </TouchableOpacity>
-    </View>
-    </SafeAreaView>
+    
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Landing">
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Landing"
+          component={LandingPage} 
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Home"
+          component={HomeScreen} 
+        />
+         {/* <Stack.Screen
+          options={{ headerShown: false }}
+          name="Sign"
+          component={SignupScreen} 
+        /> */}
+         <Stack.Screen
+          options={{ headerShown: false }}
+          name="Login"
+          component={Loginpage}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
