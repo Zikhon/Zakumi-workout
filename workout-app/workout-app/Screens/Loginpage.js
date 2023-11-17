@@ -1,8 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'; 
 import { FontAwesome } from '@expo/vector-icons'; 
+import { useNavigation } from '@react-navigation/native';
 
 const LoginPage = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
    
@@ -16,10 +18,10 @@ const LoginPage = () => {
 
       
       <View style={styles.buttonsContainer}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity onPress={() => navigation.navigate('In')} style={styles.button}>
           <Text style={styles.buttonText}>Sign in</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity onPress={() => navigation.navigate('Up')} style={styles.button}>
           <Text style={styles.buttonText}>Sign up</Text>
         </TouchableOpacity>
       </View>
@@ -29,10 +31,19 @@ const LoginPage = () => {
 
      
       <View style={styles.iconsContainer}>
-        <FontAwesome name="google" size={30} color="#ED1DBF" style={styles.icon} />
-        <FontAwesome name="facebook" size={30} color="#ED1DBF" style={styles.icon} />
-        <FontAwesome name="envelope" size={30} color="#ED1DBF" style={styles.icon} />
-      </View>
+      <Image
+        source={require('../assets/Image/gmail.jpg')}
+        style={styles.icon}
+      />
+      <Image
+        source={require('../assets/Image/Facebook.jpg')}
+        style={styles.icon}
+      />
+      <Image
+        source={require('../assets/Image/email.jpg')}
+        style={styles.icon}
+      />
+    </View>
     </View>
   );
 };
