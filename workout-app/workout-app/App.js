@@ -9,6 +9,7 @@ import LandingPage from './Screens/LandingPage';
 import Loginpage from './Screens/Loginpage'; 
 import SignUp from './Screens/SignUp'; 
 import SignIn from './Screens/SignIn'; 
+import Training1 from './Screens/Training1';
 
 
 const Stack = createNativeStackNavigator();
@@ -42,6 +43,11 @@ export default function App() {
           options={{ headerShown: false }}
           name="Login"
           component={Loginpage}
+        />
+          <Stack.Screen
+          options={{ headerShown: false }}
+          name="One"
+          component={Training1}
         />
       </Stack.Navigator>
     </NavigationContainer>

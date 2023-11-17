@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    // marginBottom: 100,
+ 
   },
   image: {
     width: 100,
@@ -83,14 +83,18 @@ const styles = StyleSheet.create({
   },
   orText: {
     fontSize: 16,
-    marginBottom: 10,
+    marginBottom: 20,
   },
   iconsContainer: {
     flexDirection: 'row',
     marginTop: 5, 
+   
   },
   icon: {
     marginHorizontal: 40,
+    borderRadius: 50,
+    height: 30,
+    width: 30,
   },
 });
 
