@@ -1,30 +1,33 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import { FontAwesome } from '@expo/vector-icons'; // Assuming you have FontAwesome icons installed
+import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'; 
+import { FontAwesome } from '@expo/vector-icons'; 
 
 const LoginPage = () => {
   return (
     <View style={styles.container}>
-      {/* Icon at the top center */}
-      <FontAwesome name="user-circle" size={50} color="#ED1DBF" style={styles.icon} />
+   
+      <Image
+        source={require('../assets/Image/Women_P-removebg-preview.png')}
+        style={styles.image}
+      />
 
-      {/* "Women Power" text in the middle */}
+   
       <Text style={styles.text}>Women Power</Text>
 
-      {/* Sign In and Sign Up buttons */}
+      
       <View style={styles.buttonsContainer}>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Sign In</Text>
+          <Text style={styles.buttonText}>Sign in</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Sign Up</Text>
+          <Text style={styles.buttonText}>Sign up</Text>
         </TouchableOpacity>
       </View>
 
-      {/* Text "or continue with" */}
-      <Text style={styles.orText}>or continue with</Text>
 
-      {/* Icons for Google, Facebook, and Email */}
+      <Text style={styles.orText}>Or Continue With</Text>
+
+     
       <View style={styles.iconsContainer}>
         <FontAwesome name="google" size={30} color="#ED1DBF" style={styles.icon} />
         <FontAwesome name="facebook" size={30} color="#ED1DBF" style={styles.icon} />
@@ -39,28 +42,33 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    // marginBottom: 100,
   },
-  icon: {
-    marginBottom: 20,
+  image: {
+    width: 100,
+    height: 100,
+    marginBottom:100,
+    borderRadius: 50,
   },
   text: {
-    fontSize: 24,
-    color: '#ED1DBF',
-    marginBottom: 20,
+    fontSize: 30,
+    color: '#F609DF',
+    marginBottom: 100,
+    textAlign: 'center', 
   },
   buttonsContainer: {
-    flexDirection: 'row',
-    marginBottom: 20,
+    flexDirection: 'flex',
+    marginBottom: 100,
   },
   button: {
-    backgroundColor: '#ED1DBF',
-    padding: 10,
-    marginHorizontal: 10,
-    borderRadius: 5,
+    backgroundColor: '#F1E2F1',
+    padding: 15,
+    margin: 35,
+    borderRadius: 50,
   },
   buttonText: {
-    color: 'white',
-    fontSize: 18,
+    color: '#ED1DBF',
+    fontSize: 30,
   },
   orText: {
     fontSize: 16,
@@ -68,6 +76,10 @@ const styles = StyleSheet.create({
   },
   iconsContainer: {
     flexDirection: 'row',
+    marginTop: 5, 
+  },
+  icon: {
+    marginHorizontal: 40,
   },
 });
 
