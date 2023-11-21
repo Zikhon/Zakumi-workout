@@ -12,16 +12,16 @@ const SignIn = () => {
         style={styles.image}
       />
 
-     
+    <Text style={styles.Text}>Email/Username</Text>
       <TextInput
         style={styles.input}
-        placeholder="Username"
       />
 
-    
+      
+
+      <Text style={styles.Text}>Password</Text>
       <TextInput
         style={styles.input}
-        placeholder="Password"
         secureTextEntry
       />
 
@@ -51,6 +51,13 @@ const styles = StyleSheet.create({
     padding: 16,
    
   },
+  Text: {
+    paddingRight: 250,
+    color: '#ED1DBF',
+    fontSize: 18,
+    marginTop: 40,
+
+  },
   image: {
     width: 100,
     height: 100,
@@ -70,12 +77,13 @@ const styles = StyleSheet.create({
     color: '#000000',
     marginBottom: 10,
     paddingLeft: 200,
+    fontSize: 18,
   },
   button: {
     backgroundColor: '#F1E2F1',
     padding: 10,
     borderRadius: 50,
-    marginTop: 100,
+    marginTop: 85,
 
   },
   buttonText: {
