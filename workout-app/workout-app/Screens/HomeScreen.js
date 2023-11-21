@@ -6,14 +6,14 @@ const HomeScreen = () => {
   const navigation = useNavigation();
   const [isLoading, setIsLoading] = useState(true);
 
-  // Simulate a delay to represent loading (you can replace this with your actual loading logic)
+  
   useEffect(() => {
     const loadingTimer = setTimeout(() => {
       setIsLoading(false);
       navigation.navigate('Login');
-    }, 2000); // Adjust the delay time as needed
+    }, 2000); 
 
-    return () => clearTimeout(loadingTimer); // Cleanup on component unmount
+    return () => clearTimeout(loadingTimer); 
   }, [navigation]);
 
   return (
@@ -23,11 +23,11 @@ const HomeScreen = () => {
         style={styles.backgroundImage}
       >
         <View style={styles.overlay}>
-          {/* Your content goes here */}
+         
           <Text style={styles.text}>WOMEN POWER</Text>
           <Text style={styles.text2}>You Can Do This!!!</Text>
 
-          {/* Loading indicator */}
+      
           {isLoading && (
             <ActivityIndicator size="large" color="#ED1DBF" style={styles.loadingIndicator} />
           )}

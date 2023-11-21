@@ -30,7 +30,6 @@ const LandingPage = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -38,12 +37,10 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   button: {
-    // backgroundColor: 'blue',
     padding: 10,
     borderRadius: 5,
   },
   buttonText: {
-    // color: 'white',
     fontSize: 16,
   },
 });

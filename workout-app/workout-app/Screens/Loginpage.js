@@ -40,7 +40,7 @@ const LoginPage = () => {
         style={styles.icon}
       />
       <Image
-        source={require('../assets/Image/email.jpg')}
+        source={require('../assets/Image/Google.jpg')}
         style={styles.icon}
       />
     </View>
