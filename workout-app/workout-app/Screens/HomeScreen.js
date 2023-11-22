@@ -29,7 +29,7 @@ const HomeScreen = () => {
 
       
           {isLoading && (
-            <ActivityIndicator size="large" color="#ED1DBF" style={styles.loadingIndicator} />
+            <ActivityIndicator size="large" color="#ED1DBF" style={styles.loadingBar} />
           )}
         </View>
       </ImageBackground>
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: '#ED1DBF',
   },
-  loadingIndicator: {
+  loadingBar: {
     marginTop: 20,
   },
 });
