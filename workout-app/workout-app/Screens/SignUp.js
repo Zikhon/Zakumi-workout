@@ -17,40 +17,39 @@ const SignUp = () => {
             <ScrollView
                
             >
-                <Text style={styles.Text}>Name</Text>
-                <TextInput
-                    style={styles.input}
-                // placeholder="Name"
-                />
+          
 
                 <Text style={styles.Text}>Email</Text>
                 <TextInput
                     style={styles.input}
-                    // placeholder="Email"
                     keyboardType="email-address"
                 />
-
                 <Text style={styles.Text}>Password</Text>
                 <TextInput
                     style={styles.input}
-                    // placeholder="Password"
+                    secureTextEntry
+                />
+
+                <Text style={styles.Text}>Confirm Password</Text>
+                <TextInput
+                    style={styles.input}
                     secureTextEntry
                 />
 
                 <Text style={styles.Text}>Height and Weight</Text>
                 <TextInput
                     style={styles.input}
-                // placeholder="Height"
+               
                 />
 
                 <Text style={styles.Text}>Medical Condition</Text>
                 <TextInput
                     style={styles.input}
-                // placeholder="Medical Condition"
+               
                 />
 
                 <TouchableOpacity onPress={() => navigation.navigate('In')} style={styles.button}>
-                    <Text style={styles.buttonText}>Next</Text>
+                    <Text style={styles.buttonText}>Sign Up</Text>
                 </TouchableOpacity>
 
                 <Text onPress={() => navigation.navigate('In')} style={styles.haveAccountText}>
@@ -109,7 +108,7 @@ const styles = StyleSheet.create({
     haveAccountText: {
         marginTop: 20,
         fontSize: 20,
-        paddingLeft: 150,
+        paddingLeft: 200,
     },
 });
 

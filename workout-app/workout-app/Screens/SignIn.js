@@ -8,15 +8,16 @@ const SignIn = () => {
     return (
         <View style={styles.container}>
             <ImageBackground
-                source={require('../assets/Image/backgroung picture.jpg')} 
+                source={require('../assets/Image/gym5.jpg')} 
                 style={styles.backgroundImage}
             >
+            <View style={styles.overlay}>
                 <Image
                     source={require('../assets/Image/Women_P-removebg-preview.png')}
                     style={styles.image}
                 />
 
-                <Text style={styles.Text}>Email/Username</Text>
+                <Text style={styles.Text}>Email</Text>
                 <TextInput
                     style={styles.input}
                 />
@@ -41,6 +42,7 @@ const SignIn = () => {
                         </Text>
                     </Text>
                 </View>
+                </View>
             </ImageBackground>
         </View>
     );
@@ -49,15 +51,18 @@ const SignIn = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
         padding: 10,
     },
     backgroundImage: {
         flex: 1,
         resizeMode: 'cover',
-        width: '100%',
-        height: '100%',
-    },
+      },
+      overlay: {
+        flex: 1,
+        backgroundColor: 'rgba(0, 0, 0, 0.5)', 
+        justifyContent: 'center',
+      },
+    
     Text: {
         paddingRight: 25,
         color: '#ED1DBF',
@@ -67,6 +72,7 @@ const styles = StyleSheet.create({
     Text1: {
         paddingRight: 250,
         color: 'black',
+        fontWeight: 'bold',
     },
     image: {
         width: 100,
@@ -76,24 +82,26 @@ const styles = StyleSheet.create({
     },
     input: {
         height: 40,
-        width: '100%',
         borderColor: 'gray',
         borderWidth: 1,
-        marginBottom: 30,
+        marginBottom: 25,
         paddingLeft: 10,
         borderRadius: 50,
     },
     forgetPasswordText: {
         color: '#000000',
-        marginBottom: 10,
-        paddingLeft: 200,
+        paddingLeft: 250,
         fontSize: 18,
+        fontWeight: 'bold',
+
+     
     },
     button: {
         backgroundColor: '#F1E2F1',
-        padding: 10,
+        padding: 2,
         borderRadius: 50,
         marginTop: 85,
+        width: '100%',
     },
     buttonText: {
         color: '#ED1DBF',

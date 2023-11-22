@@ -1,74 +1,76 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'; 
-import { FontAwesome } from '@expo/vector-icons'; 
+import { StyleSheet, Text, View, TouchableOpacity, Image, SafeAreaView, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const LoginPage = () => {
   const navigation = useNavigation();
   return (
-    <View style={styles.container}>
-   
-      <Image
-        source={require('../assets/Image/Women_P-removebg-preview.png')}
-        style={styles.image}
-      />
+    <SafeAreaView style={styles.container}>
+      <ImageBackground
+        source={require('../assets/Image/gym5.jpg')}
+        style={styles.backgroundImage}
+      >
+        <View style={styles.overlay}>
+          <Image
+            source={require('../assets/Image/Women_P-removebg-preview.png')}
+            style={styles.image}
+          />
 
-   
-      <Text style={styles.text}>Women Power</Text>
+          <Text style={styles.text}>Women Power</Text>
 
-      
-      <View style={styles.buttonsContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate('In')} style={styles.button}>
-          <Text style={styles.buttonText}>Sign in</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Up')} style={styles.button}>
-          <Text style={styles.buttonText}>Sign up</Text>
-        </TouchableOpacity>
-      </View>
+          <View style={styles.buttonsContainer}>
+            <TouchableOpacity onPress={() => navigation.navigate('In')} style={styles.button}>
+              <Text style={styles.buttonText}>Sign in</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Up')} style={styles.button}>
+              <Text style={styles.buttonText}>Sign up</Text>
+            </TouchableOpacity>
+          </View>
 
+          <Text style={styles.orText}>Or Continue With</Text>
 
-      <Text style={styles.orText}>Or Continue With</Text>
-
-     
-      <View style={styles.iconsContainer}>
-      <Image
-        source={require('../assets/Image/gmail.jpg')}
-        style={styles.icon}
-      />
-      <Image
-        source={require('../assets/Image/Facebook.jpg')}
-        style={styles.icon}
-      />
+          <View style={styles.iconsContainer}>
+  
       <Image
         source={require('../assets/Image/Google.jpg')}
         style={styles.icon}
       />
-    </View>
-    </View>
+          </View>
+        </View>
+      </ImageBackground>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
+  },
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover',
     justifyContent: 'center',
- 
+  },
+  overlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', 
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   image: {
     width: 100,
     height: 100,
-    marginBottom:100,
+    marginBottom: 100,
     borderRadius: 50,
   },
   text: {
     fontSize: 30,
     color: '#F609DF',
     marginBottom: 100,
-    textAlign: 'center', 
+    textAlign: 'center',
   },
   buttonsContainer: {
-    flexDirection: 'flex',
+    flexDirection: 'row',
     marginBottom: 100,
   },
   button: {
@@ -84,17 +86,17 @@ const styles = StyleSheet.create({
   orText: {
     fontSize: 16,
     marginBottom: 20,
+    fontWeight: 'bold',
   },
   iconsContainer: {
     flexDirection: 'row',
-    marginTop: 5, 
-   
+    marginTop: 5,
   },
   icon: {
     marginHorizontal: 40,
-    borderRadius: 50,
-    height: 30,
-    width: 30,
+    borderRadius: 30,
+    height: 50,
+    width: 50,
   },
 });
 
