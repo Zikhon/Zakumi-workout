@@ -8,7 +8,7 @@ const SignIn = () => {
     return (
         <View style={styles.container}>
             <ImageBackground
-                source={require('../assets/Image/gym5.jpg')} 
+                source={require('../assets/Image/main.webp')} 
                 style={styles.backgroundImage}
             >
             <View style={styles.overlay}>
@@ -17,14 +17,18 @@ const SignIn = () => {
                     style={styles.image}
                 />
 
-                <Text style={styles.Text}>Email</Text>
+              
                 <TextInput
                     style={styles.input}
+                    placeholder="Enter your email"
+                    placeholderTextColor="#ED1DBF"
                 />
 
-                <Text style={styles.Text}>Password</Text>
+    
                 <TextInput
                     style={styles.input}
+                    placeholder="Enter your password"
+                    placeholderTextColor="#ED1DBF"
                     secureTextEntry
                 />
 
@@ -51,42 +55,52 @@ const SignIn = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 10,
+
     },
     backgroundImage: {
         flex: 1,
         resizeMode: 'cover',
+   
       },
       overlay: {
         flex: 1,
         backgroundColor: 'rgba(0, 0, 0, 0.5)', 
         justifyContent: 'center',
+        paddingBottom: 100,
       },
     
-    Text: {
-        paddingRight: 25,
+      Text: {
+        marginLeft: 15, 
         color: '#ED1DBF',
         fontSize: 18,
         marginTop: 55,
+        textAlign: 'center', 
     },
+    
     Text1: {
-        paddingRight: 250,
         color: 'black',
         fontWeight: 'bold',
+        textAlign: 'center', 
     },
     image: {
         width: 100,
         height: 100,
         marginBottom: 70,
         borderRadius: 50,
+        alignSelf: 'center',
+
     },
     input: {
         height: 40,
         borderColor: 'gray',
         borderWidth: 1,
         marginBottom: 25,
+        borderRadius: 40,
+        marginTop: 50 ,
+        width: '90%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
         paddingLeft: 10,
-        borderRadius: 50,
     },
     forgetPasswordText: {
         color: '#000000',
@@ -97,11 +111,13 @@ const styles = StyleSheet.create({
      
     },
     button: {
-        backgroundColor: '#F1E2F1',
-        padding: 2,
+        backgroundColor: '#D9D9D9',
+        margin: 50,
         borderRadius: 50,
         marginTop: 85,
-        width: '100%',
+        width: 150,
+        alignSelf: 'center',
+        justifyContent: 'center',
     },
     buttonText: {
         color: '#ED1DBF',
