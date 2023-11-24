@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, ImageBackground } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, ImageBackground, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const SignIn = () => {
@@ -17,17 +17,22 @@ const SignIn = () => {
                     style={styles.image}
                 />
 
-              
+              <ScrollView 
+              style={styles.ScrollView}
+              contentContainerStyle={styles.ScrollViewContent}
+                    showsVerticalScrollIndicator={false}
+
+              >
                 <TextInput
                     style={styles.input}
-                    placeholder="Enter your email"
+                    placeholder="Email address"
                     placeholderTextColor="#ED1DBF"
                 />
 
     
                 <TextInput
                     style={styles.input}
-                    placeholder="Enter your password"
+                    placeholder="Password"
                     placeholderTextColor="#ED1DBF"
                     secureTextEntry
                 />
@@ -46,6 +51,7 @@ const SignIn = () => {
                         </Text>
                     </Text>
                 </View>
+                </ScrollView>
                 </View>
             </ImageBackground>
         </View>
@@ -55,11 +61,19 @@ const SignIn = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-
+    },
+    ScrollView: {
+      marginTop: 20,
+    },
+    ScrollViewContent: {
+        flexGrow: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     backgroundImage: {
         flex: 1,
         resizeMode: 'cover',
+
    
       },
       overlay: {
@@ -73,7 +87,6 @@ const styles = StyleSheet.create({
         marginLeft: 15, 
         color: '#ED1DBF',
         fontSize: 18,
-        marginTop: 55,
         textAlign: 'center', 
     },
     
@@ -88,7 +101,7 @@ const styles = StyleSheet.create({
         marginBottom: 70,
         borderRadius: 50,
         alignSelf: 'center',
-
+        marginTop: 40,
     },
     input: {
         height: 40,
@@ -107,8 +120,7 @@ const styles = StyleSheet.create({
         paddingLeft: 250,
         fontSize: 18,
         fontWeight: 'bold',
-
-     
+        textDecorationLine: 'underline',
     },
     button: {
         backgroundColor: '#D9D9D9',

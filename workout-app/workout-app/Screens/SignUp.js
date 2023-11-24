@@ -14,11 +14,8 @@ const SignUp = () => {
             style={styles.image}
         />
         <View>
-            <ScrollView
-               
-            >
-          
-
+            <ScrollView>
+       
                 <Text style={styles.Text}>Email</Text>
                 <TextInput
                     style={styles.input}
@@ -75,7 +72,6 @@ const styles = StyleSheet.create({
         height: 100,
         marginBottom: 70,
         borderRadius: 50,
-        position: '',
         top: 35,
         zIndex: 1,
     },
