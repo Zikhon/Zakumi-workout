@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ScrollView, SafeAreaView } from 'react-native';
+import { View, Text, ImageBackground, TextInput, TouchableOpacity, StyleSheet, Image, ScrollView, SafeAreaView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const SignUp = () => {
@@ -14,6 +14,10 @@ const SignUp = () => {
             style={styles.image}
         />
         <View>
+        <ImageBackground
+                source={require('../assets/Image/image1.jpg')} 
+                style={styles.backgroundImage}
+            >
             <ScrollView>
        
                 <Text style={styles.Text}>Email</Text>
@@ -53,7 +57,10 @@ const SignUp = () => {
                     Already have an account?
                 </Text>
             </ScrollView>
-        </View>
+          
+        
+          </ImageBackground>
+          </View>
     </SafeAreaView>
     );
 };
@@ -75,6 +82,12 @@ const styles = StyleSheet.create({
         top: 35,
         zIndex: 1,
     },
+    backgroundImage: {
+        resizeMode: 'cover',
+    
+
+   
+      },
     Text: {
         paddingRight: 250,
         color: '#ED1DBF',

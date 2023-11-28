@@ -1,9 +1,20 @@
-import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, ImageBackground, ScrollView } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity, Image,
+     StyleSheet, ImageBackground, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const SignIn = () => {
     const navigation = useNavigation();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleSignIn = () => {
+        if (email.trim() === '' || password.trim() === '') {
+            alert('Please fill in all fields');
+        } else {
+            navigation.navigate('One');
+        }
+    };
 
     return (
         <View style={styles.container}>
@@ -11,47 +22,48 @@ const SignIn = () => {
                 source={require('../assets/Image/main.webp')} 
                 style={styles.backgroundImage}
             >
-            <View style={styles.overlay}>
-                <Image
-                    source={require('../assets/Image/Women_P-removebg-preview.png')}
-                    style={styles.image}
-                />
+                <View style={styles.overlay}>
+                    <Image
+                        source={require('../assets/Image/Women_P-removebg-preview.png')}
+                        style={styles.image}
+                    />
+                    <ScrollView 
+                        style={styles.ScrollView}
+                        contentContainerStyle={styles.ScrollViewContent}
+                        showsVerticalScrollIndicator={false}
+                    >
+                        <TextInput
+                            style={styles.input}
+                            placeholder="Email address"
+                            placeholderTextColor="#ED1DBF"
+                            onChangeText={setEmail}
+                            value={email}
+                        />
 
-              <ScrollView 
-              style={styles.ScrollView}
-              contentContainerStyle={styles.ScrollViewContent}
-                    showsVerticalScrollIndicator={false}
+                        <TextInput
+                            style={styles.input}
+                            placeholder="Password"
+                            placeholderTextColor="#ED1DBF"
+                            secureTextEntry
+                            onChangeText={setPassword}
+                            value={password}
+                        />
 
-              >
-                <TextInput
-                    style={styles.input}
-                    placeholder="Email address"
-                    placeholderTextColor="#ED1DBF"
-                />
+                        <Text style={styles.forgetPasswordText}>Forget Password?</Text>
 
-    
-                <TextInput
-                    style={styles.input}
-                    placeholder="Password"
-                    placeholderTextColor="#ED1DBF"
-                    secureTextEntry
-                />
+                        <TouchableOpacity onPress={handleSignIn} style={styles.button}>
+                            <Text style={styles.buttonText}>Sign In</Text>
+                        </TouchableOpacity>
 
-                <Text style={styles.forgetPasswordText}>Forget Password?</Text>
-
-                <TouchableOpacity onPress={() => navigation.navigate('One')} style={styles.button}>
-                    <Text style={styles.buttonText}>Sign In</Text>
-                </TouchableOpacity>
-
-                <View>
-                    <Text style={styles.Text}>
-                        Don't have an account?{' '}
-                        <Text onPress={() => navigation.navigate('Up')} style={styles.Text1}>
-                            Sign Up
-                        </Text>
-                    </Text>
-                </View>
-                </ScrollView>
+                        <View>
+                            <Text style={styles.Text}>
+                                Don't have an account?{' '}
+                                <Text onPress={() => navigation.navigate('Up')} style={styles.Text1}>
+                                    Sign Up
+                                </Text>
+                            </Text>
+                        </View>
+                    </ScrollView>
                 </View>
             </ImageBackground>
         </View>
