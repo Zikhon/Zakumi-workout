@@ -1,21 +1,29 @@
-import React from 'react';
-import { StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, ImageBackground, ScrollView, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const Training1 = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
+      {/* Task Bar */}
+      <TouchableOpacity style={styles.taskBar} onPress={() => navigation.navigate('Two')}>
+        <Text style={styles.taskText}>Task Bar Content</Text>
+      </TouchableOpacity>
+
       <ImageBackground
-        source={require('../assets/Image/gym1.jpg')} // Adjust the path based on your project structure
+        source={require('../assets/Image/gym1.jpg')}
         style={styles.overlayContainer}
       >
         <View style={styles.headerContainer}>
-          <Text style={styles.headerText}>STRONG & LEAN</Text>
-          <Text style={styles.subHeaderText}>BODY BUILDING</Text>
-          <Text style={styles.subHeaderText}>30 DAYS</Text>
+          <Text style={[styles.textContainer, styles.headerText]}>STRONG & LEAN</Text>
+          <Text style={[styles.textContainer, styles.subHeaderText]}>BODY BUILDING</Text>
+          <Text style={[styles.textContainer, styles.subHeaderText, styles.bottomText]}>30 DAYS</Text>
         </View>
       </ImageBackground>
 
-      <ScrollView style={styles.daysContainer}>
+      <ScrollView style={styles.daysContainer}> 
         {[...Array(30)].map((_, index) => (
           <View key={index} style={styles.dayContainer}>
             <Text style={styles.dayText}>DAY {index + 1}</Text>
@@ -23,6 +31,11 @@ const Training1 = () => {
           </View>
         ))}
       </ScrollView>
+
+      {/* Footer */}
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>Footer Content</Text>
+      </View>
     </View>
   );
 };
@@ -34,27 +47,33 @@ const styles = StyleSheet.create({
   overlayContainer: {
     borderRadius: 30,
     margin: 35,
-    marginTop: 133,
+    // marginTop: 133,
     width: 360,
     height: 185,
     overflow: 'hidden',
   },
   headerContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     padding: 16,
+    paddingBottom: 20,
+  },
+  textContainer: {
+    color: 'white',
   },
   headerText: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 10,
-    color: 'white', // Set the text color to be visible on the background
+    marginBottom: 5,
   },
   subHeaderText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 75,
+  },
+  bottomText: {
     fontSize: 18,
-    marginBottom: 10,
-    color: 'white', // Set the text color to be visible on the background
+    marginBottom: 0,
   },
   daysContainer: {
     marginTop: 16,
@@ -65,16 +84,37 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     width: '100%',
-    marginBottom: 8,
+    marginBottom: 25,
   },
   dayText: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: 'white', // Set the text color to be visible on the background
+    color: '#ED1DBF',
   },
   statusText: {
     fontSize: 16,
-    color: 'white', // Set the text color to be visible on the background
+    color: '#ED1DBF',
+  },
+  // Task Bar Styles
+  taskBar: {
+    backgroundColor: 'blue',
+    padding: 20,
+    marginTop: 25,
+    alignItems: 'center',
+  },
+  taskText: {
+    color: 'white',
+    fontSize: 16,
+  },
+  // Footer Styles
+  footer: {
+    backgroundColor: 'green',
+    padding: 20,
+    alignItems: 'center',
+  },
+  footerText: {
+    color: 'white',
+    fontSize: 16,
   },
 });
 
