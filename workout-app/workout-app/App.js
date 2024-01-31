@@ -52,7 +52,7 @@ export default function App() {
         />
            <Stack.Screen
           options={{ headerShown: false }}
-          name="One"
+          name="Two"
           component={Training2}
         />
       </Stack.Navigator>
