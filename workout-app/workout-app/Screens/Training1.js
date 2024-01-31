@@ -7,7 +7,6 @@ const Training1 = () => {
 
   return (
     <View style={styles.container}>
-      {/* Task Bar */}
       <TouchableOpacity style={styles.taskBar} onPress={() => navigation.navigate('Two')}>
         <Text style={styles.taskText}>Task Bar Content</Text>
       </TouchableOpacity>
@@ -32,7 +31,7 @@ const Training1 = () => {
         ))}
       </ScrollView>
 
-      {/* Footer */}
+  
       <View style={styles.footer}>
         <Text style={styles.footerText}>Footer Content</Text>
       </View>
@@ -47,7 +46,6 @@ const styles = StyleSheet.create({
   overlayContainer: {
     borderRadius: 30,
     margin: 35,
-    // marginTop: 133,
     width: 360,
     height: 185,
     overflow: 'hidden',
@@ -95,7 +93,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#ED1DBF',
   },
-  // Task Bar Styles
+
   taskBar: {
     backgroundColor: 'blue',
     padding: 20,
@@ -106,7 +104,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 16,
   },
-  // Footer Styles
+ 
   footer: {
     backgroundColor: 'green',
     padding: 20,
