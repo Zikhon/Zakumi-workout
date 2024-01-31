@@ -1,34 +1,45 @@
 import React from 'react';
-import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-native';
 
 const Training1 = () => {
   return (
-    <ImageBackground
-      source={require('../assets/Image/gym1.jpg')} // Replace with the path to your image
-      style={styles.backgroundImage}
-    >
-      <View style={styles.container}>
-        <Text style={styles.headerText}>STRONG & LEAN</Text>
-        <Text style={styles.subHeaderText}>BODY BUILDING</Text>
-        <Text style={styles.subHeaderText}>30 DAYS</Text>
+    <View style={styles.container}>
+      <ImageBackground
+        source={require('../assets/Image/gym1.jpg')} // Adjust the path based on your project structure
+        style={styles.overlayContainer}
+      >
+        <View style={styles.headerContainer}>
+          <Text style={styles.headerText}>STRONG & LEAN</Text>
+          <Text style={styles.subHeaderText}>BODY BUILDING</Text>
+          <Text style={styles.subHeaderText}>30 DAYS</Text>
+        </View>
+      </ImageBackground>
 
+      <ScrollView style={styles.daysContainer}>
         {[...Array(30)].map((_, index) => (
           <View key={index} style={styles.dayContainer}>
             <Text style={styles.dayText}>DAY {index + 1}</Text>
             <Text style={styles.statusText}>OPEN</Text>
           </View>
         ))}
-      </View>
-    </ImageBackground>
+      </ScrollView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  backgroundImage: {
-    flex: 1,
-    resizeMode: 'cover', // or 'stretch' as per your preference
-  },
   container: {
+    flex: 1,
+  },
+  overlayContainer: {
+    borderRadius: 30,
+    margin: 35,
+    marginTop: 133,
+    width: 360,
+    height: 185,
+    overflow: 'hidden',
+  },
+  headerContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -44,6 +55,10 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginBottom: 10,
     color: 'white', // Set the text color to be visible on the background
+  },
+  daysContainer: {
+    marginTop: 16,
+    padding: 16,
   },
   dayContainer: {
     flexDirection: 'row',
