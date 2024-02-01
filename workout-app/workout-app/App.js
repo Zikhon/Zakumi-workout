@@ -11,6 +11,8 @@ import SignUp from './Screens/SignUp';
 import SignIn from './Screens/SignIn'; 
 import Training1 from './Screens/Training1';
 import Training2 from './Screens/Training2';
+import Training3 from './Screens/Training3';
+import Training4 from './Screens/Training4';
 
 
 const Stack = createNativeStackNavigator();
@@ -54,6 +56,16 @@ export default function App() {
           options={{ headerShown: false }}
           name="Two"
           component={Training2}
+        />
+            <Stack.Screen
+          options={{ headerShown: false }}
+          name="Three"
+          component={Training3}
+        />
+            <Stack.Screen
+          options={{ headerShown: false }}
+          name="Four"
+          component={Training4}
         />
       </Stack.Navigator>
     </NavigationContainer>
