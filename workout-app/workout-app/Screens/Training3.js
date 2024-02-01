@@ -13,18 +13,18 @@ const Training3 = () => {
       </TouchableOpacity>
 
       <ImageBackground
-        source={require('../assets/Image/gym1.jpg')}
+        source={require('../assets/Image/GYM4.webp')}
         style={styles.overlayContainer}
       >
         <View style={styles.headerContainer}>
-          <Text style={[styles.textContainer, styles.headerText]}>STRONG & LEAN</Text>
-          <Text style={[styles.textContainer, styles.subHeaderText]}>BODY BUILDING</Text>
-          <Text style={[styles.textContainer, styles.subHeaderText, styles.bottomText]}>30 DAYS</Text>
+          <Text style={[styles.textContainer, styles.headerText]}>BUTT & THIGH TONING</Text>
+          {/* <Text style={[styles.textContainer, styles.subHeaderText]}>BODY BUILDING</Text> */}
+          <Text style={[styles.textContainer, styles.subHeaderText, styles.bottomText]}>28 DAYS</Text>
         </View>
       </ImageBackground>
 
       <ScrollView style={styles.daysContainer}> 
-        {[...Array(30)].map((_, index) => (
+        {[...Array(28)].map((_, index) => (
           <View key={index} style={styles.dayContainer}>
             <Text style={styles.dayText}>DAY {index + 1}</Text>
             <Text style={styles.statusText}>OPEN</Text>
@@ -73,13 +73,9 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 5,
+    marginBottom: 100,
   },
-  subHeaderText: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 75,
-  },
+
   bottomText: {
     fontSize: 18,
     marginBottom: 0,

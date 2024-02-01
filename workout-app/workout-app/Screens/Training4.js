@@ -13,18 +13,18 @@ const Training4 = () => {
       </TouchableOpacity>
 
       <ImageBackground
-        source={require('../assets/Image/gym1.jpg')}
+        source={require('../assets/Image/GYM3.jpg')}
         style={styles.overlayContainer}
       >
         <View style={styles.headerContainer}>
-          <Text style={[styles.textContainer, styles.headerText]}>STRONG & LEAN</Text>
-          <Text style={[styles.textContainer, styles.subHeaderText]}>BODY BUILDING</Text>
-          <Text style={[styles.textContainer, styles.subHeaderText, styles.bottomText]}>30 DAYS</Text>
+          <Text style={[styles.textContainer, styles.headerText]}>FULL- BODY WEIGHT{'\n'}
+LOSS</Text>
+          <Text style={[styles.textContainer, styles.subHeaderText, styles.bottomText]}>29 DAYS</Text>
         </View>
       </ImageBackground>
 
       <ScrollView style={styles.daysContainer}> 
-        {[...Array(30)].map((_, index) => (
+        {[...Array(29)].map((_, index) => (
           <View key={index} style={styles.dayContainer}>
             <Text style={styles.dayText}>DAY {index + 1}</Text>
             <Text style={styles.statusText}>OPEN</Text>
@@ -63,23 +63,19 @@ const styles = StyleSheet.create({
   },
   headerContainer: {
     flex: 1,
-    alignItems: 'flex-start',
+    alignItems: 'flex-end',
     padding: 16,
     paddingBottom: 20,
   },
   textContainer: {
-    color: 'white',
+    color: '#F620C7',
   },
   headerText: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 5,
+    marginBottom: 90,
   },
-  subHeaderText: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 75,
-  },
+
   bottomText: {
     fontSize: 18,
     marginBottom: 0,

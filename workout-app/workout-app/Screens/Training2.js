@@ -13,18 +13,18 @@ const Training2 = () => {
       </TouchableOpacity>
 
       <ImageBackground
-        source={require('../assets/Image/gym1.jpg')}
+        source={require('../assets/Image/gym2.webp')}
         style={styles.overlayContainer}
       >
         <View style={styles.headerContainer}>
-          <Text style={[styles.textContainer, styles.headerText]}>STRONG & LEAN</Text>
-          <Text style={[styles.textContainer, styles.subHeaderText]}>BODY BUILDING</Text>
-          <Text style={[styles.textContainer, styles.subHeaderText, styles.bottomText]}>30 DAYS</Text>
+          <Text style={[styles.textContainer, styles.headerText]}>BELLY FAT BURNER</Text>
+          {/* <Text style={[styles.textContainer, styles.subHeaderText]}>BODY BUILDING</Text> */}
+          <Text style={[styles.textContainer, styles.subHeaderText, styles.bottomText]}>29 DAYS</Text>
         </View>
       </ImageBackground>
 
       <ScrollView style={styles.daysContainer}> 
-        {[...Array(30)].map((_, index) => (
+        {[...Array(29)].map((_, index) => (
           <View key={index} style={styles.dayContainer}>
             <Text style={styles.dayText}>DAY {index + 1}</Text>
             <Text style={styles.statusText}>OPEN</Text>
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   },
   headerContainer: {
     flex: 1,
-    alignItems: 'flex-start',
+    alignItems: 'flex-end',
     padding: 16,
     paddingBottom: 20,
   },
@@ -73,12 +73,7 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 5,
-  },
-  subHeaderText: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 75,
+    marginBottom: 100,
   },
   bottomText: {
     fontSize: 18,
