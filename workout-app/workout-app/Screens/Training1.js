@@ -5,6 +5,13 @@ import { useNavigation } from '@react-navigation/native';
 const Training1 = () => {
   const navigation = useNavigation();
 
+  const navigateToReports = () => {
+    navigation.navigate('Five','Six','One');
+  };
+  // const navigateToReports = () => {
+  //   navigation.navigate('Six');
+  // };
+
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.taskBar} onPress={() => navigation.navigate('Two')}>
@@ -37,14 +44,18 @@ const Training1 = () => {
           <Image source={require('../assets/Image/Training.png')} style={styles.footerImage} />
           <Text style={styles.footerText}>Training</Text>
         </View>
-        <View style={styles.footerItem}>
+         {/* <TouchableOpacity style={styles.footerItem} onPress={navigateToReports}>
+          <Image source={require('../assets/Image/Training.png')} style={styles.footerImage} />
+          <Text style={styles.footerText}>Training</Text>
+        </TouchableOpacity> */}
+        <TouchableOpacity style={styles.footerItem} onPress={navigateToReports}>
           <Image source={require('../assets/Image/Reports.png')} style={styles.footerImage} />
           <Text style={styles.footerText}>Reports</Text>
-        </View>
-        <View style={styles.footerItem}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.footerItem} onPress={navigateToReports}>
           <Image source={require('../assets/Image/user.png')} style={styles.footerImage} />
           <Text style={styles.footerText}>User</Text>
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
