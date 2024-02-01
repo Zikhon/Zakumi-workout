@@ -44,10 +44,6 @@ const Training1 = () => {
           <Image source={require('../assets/Image/Training.png')} style={styles.footerImage} />
           <Text style={styles.footerText}>Training</Text>
         </View>
-         {/* <TouchableOpacity style={styles.footerItem} onPress={navigateToReports}>
-          <Image source={require('../assets/Image/Training.png')} style={styles.footerImage} />
-          <Text style={styles.footerText}>Training</Text>
-        </TouchableOpacity> */}
         <TouchableOpacity style={styles.footerItem} onPress={navigateToReports}>
           <Image source={require('../assets/Image/Reports.png')} style={styles.footerImage} />
           <Text style={styles.footerText}>Reports</Text>
