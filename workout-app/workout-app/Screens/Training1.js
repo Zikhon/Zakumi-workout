@@ -34,7 +34,9 @@ const Training1 = () => {
 
   
       <View style={styles.footer}>
-        <Text style={styles.footerText}>Footer Content</Text>
+        <Text style={styles.footerText}>Training</Text>
+        <Text style={styles.footerText}>Reports</Text>
+        <Text style={styles.footerText}>User</Text>
       </View>
     </View>
   );
@@ -117,6 +119,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'green',
     padding: 20,
     alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   footerText: {
     color: 'black',
