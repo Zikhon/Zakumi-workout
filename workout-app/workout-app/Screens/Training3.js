@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
   },
   textContainer: {
-    color: 'white',
+    color: '#F620C7',
   },
   headerText: {
     fontSize: 24,
