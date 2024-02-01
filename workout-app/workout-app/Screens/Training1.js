@@ -96,7 +96,6 @@ const styles = StyleSheet.create({
   },
 
   taskBar: {
-    // backgroundColor: 'blue',
     padding: 20,
     marginTop: 25,
     flexDirection: 'row',
