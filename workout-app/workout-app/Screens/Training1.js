@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, ImageBackground, ScrollView, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, ScrollView, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const Training1 = () => {
@@ -9,6 +9,7 @@ const Training1 = () => {
     <View style={styles.container}>
       <TouchableOpacity style={styles.taskBar} onPress={() => navigation.navigate('Two')}>
         <Text style={styles.taskText}>PLAN</Text>
+        <Image source={require('../assets/Image/Women_P-removebg-preview.png')} style={styles.taskImage} />
       </TouchableOpacity>
 
       <ImageBackground
@@ -98,12 +99,19 @@ const styles = StyleSheet.create({
     // backgroundColor: 'blue',
     padding: 20,
     marginTop: 25,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
   },
   taskText: {
     color: 'black',
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: 'bold',
+  },
+  taskImage: {
+    width: 30,
+    height: 30,
+    borderRadius: 50,
   },
  
   footer: {
