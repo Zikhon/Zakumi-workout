@@ -8,7 +8,7 @@ const Training1 = () => {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.taskBar} onPress={() => navigation.navigate('Two')}>
-        <Text style={styles.taskText}>Task Bar Content</Text>
+        <Text style={styles.taskText}>PLAN</Text>
       </TouchableOpacity>
 
       <ImageBackground
@@ -95,14 +95,15 @@ const styles = StyleSheet.create({
   },
 
   taskBar: {
-    backgroundColor: 'blue',
+    // backgroundColor: 'blue',
     padding: 20,
     marginTop: 25,
     alignItems: 'center',
   },
   taskText: {
-    color: 'white',
+    color: 'black',
     fontSize: 16,
+    fontWeight: 'bold',
   },
  
   footer: {
@@ -111,7 +112,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   footerText: {
-    color: 'white',
+    color: 'black',
     fontSize: 16,
   },
 });
