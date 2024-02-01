@@ -32,11 +32,19 @@ const Training1 = () => {
         ))}
       </ScrollView>
 
-  
       <View style={styles.footer}>
-        <Text style={styles.footerText}>Training</Text>
-        <Text style={styles.footerText}>Reports</Text>
-        <Text style={styles.footerText}>User</Text>
+        <View style={styles.footerItem}>
+          <Image source={require('../assets/Image/Training.png')} style={styles.footerImage} />
+          <Text style={styles.footerText}>Training</Text>
+        </View>
+        <View style={styles.footerItem}>
+          <Image source={require('../assets/Image/Reports.png')} style={styles.footerImage} />
+          <Text style={styles.footerText}>Reports</Text>
+        </View>
+        <View style={styles.footerItem}>
+          <Image source={require('../assets/Image/user.png')} style={styles.footerImage} />
+          <Text style={styles.footerText}>User</Text>
+        </View>
       </View>
     </View>
   );
@@ -116,15 +124,23 @@ const styles = StyleSheet.create({
   },
  
   footer: {
-    backgroundColor: 'green',
-    padding: 20,
-    alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 20,
+  },
+  footerItem: {
+    alignItems: 'center',
   },
   footerText: {
     color: 'black',
     fontSize: 16,
+  },
+  footerImage: {
+    width: 40,
+    height: 40,
+    marginBottom: 5,
+    borderRadius: 45,
   },
 });
 
