@@ -6,7 +6,6 @@ const Reports = () => {
   const [selectedDate, setSelectedDate] = useState('');
 
   const onDayPress = (day) => {
-    // Handle the selected date
     setSelectedDate(day.dateString);
   };
 
