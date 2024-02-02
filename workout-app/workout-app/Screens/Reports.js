@@ -13,7 +13,7 @@ const Reports = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Reports</Text>
+        <Text style={styles.headerText}>Calendar</Text>
       </View>
       <View style={styles.calendarContainer}>
         <Calendar
@@ -36,17 +36,16 @@ const styles = StyleSheet.create({
     
   },
   header: {
-    padding: 20,
+    padding: 50,
     backgroundColor: '#f0f0f0',
     alignItems: 'flex-start',
   },
   headerText: {
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: 'bold',
   },
   calendarContainer: {
     padding: 20,
-    backgroundColor: 'black',
   },
 });
 
