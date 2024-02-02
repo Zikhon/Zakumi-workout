@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   },
   calendarContainer: {
     padding: 20,
-    borderRadius: 30,
+    backgroundColor: 'black',
   },
 });
 
