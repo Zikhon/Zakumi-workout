@@ -21,7 +21,7 @@ const Reports = () => {
           markedDates={{
             [selectedDate]: {
               selected: true,
-              selectedColor: 'blue',
+              selectedColor: 'black',
             },
           }}
         />
