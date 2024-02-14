@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 const Training1 = () => {
   const navigation = useNavigation();
   const [isHovered, setIsHovered] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const navigateToReports = () => {
     navigation.navigate('Five','Six','One');
@@ -34,10 +35,13 @@ const Training1 = () => {
             <Text style={styles.dayText}>DAY {index + 1}</Text>
             <TouchableOpacity
               onPress={() => {}}
-              onMouseEnter={() => setIsHovered(true)}
+              onMouseEnter={() => {
+                setIsHovered(true);
+                setHoveredIndex(index);
+              }}
               onMouseLeave={() => setIsHovered(false)}
             >
-              <Text style={[styles.statusText, isHovered && styles.hoveredText]}>OPEN</Text>
+              <Text style={[styles.statusText, (isHovered && hoveredIndex === index) && styles.hoveredText]}>OPEN</Text>
             </TouchableOpacity>
           </View>
         ))}
@@ -116,8 +120,7 @@ const styles = StyleSheet.create({
     color: '#ED1DBF',
   },
   hoveredText: {
-
-    color: 'blue',
+    color: 'black',
   },
 
   taskBar: {
