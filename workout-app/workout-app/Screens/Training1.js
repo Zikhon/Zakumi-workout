@@ -4,13 +4,11 @@ import { useNavigation } from '@react-navigation/native';
 
 const Training1 = () => {
   const navigation = useNavigation();
+  const [isHovered, setIsHovered] = useState(false);
 
   const navigateToReports = () => {
     navigation.navigate('Five','Six','One');
   };
-  // const navigateToReports = () => {
-  //   navigation.navigate('Six');
-  // };
 
   return (
     <View style={styles.container}>
@@ -34,7 +32,13 @@ const Training1 = () => {
         {[...Array(30)].map((_, index) => (
           <View key={index} style={styles.dayContainer}>
             <Text style={styles.dayText}>DAY {index + 1}</Text>
-            <Text style={styles.statusText}>OPEN</Text>
+            <TouchableOpacity
+              onPress={() => {}}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              <Text style={[styles.statusText, isHovered && styles.hoveredText]}>OPEN</Text>
+            </TouchableOpacity>
           </View>
         ))}
       </ScrollView>
@@ -110,6 +114,10 @@ const styles = StyleSheet.create({
   statusText: {
     fontSize: 16,
     color: '#ED1DBF',
+  },
+  hoveredText: {
+
+    color: 'blue',
   },
 
   taskBar: {
