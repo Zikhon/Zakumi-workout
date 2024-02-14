@@ -34,14 +34,19 @@ const Training1 = () => {
           <View key={index} style={styles.dayContainer}>
             <Text style={styles.dayText}>DAY {index + 1}</Text>
             <TouchableOpacity
-              onPress={() => {}}
+              onPress={() => {
+                // Handle onPress for "OPEN" here
+              }}
               onMouseEnter={() => {
                 setIsHovered(true);
                 setHoveredIndex(index);
               }}
               onMouseLeave={() => setIsHovered(false)}
             >
-              <Text style={[styles.statusText, (isHovered && hoveredIndex === index) && styles.hoveredText]}>OPEN</Text>
+              <View style={styles.openContainer}>
+                <Text style={[styles.statusText, (isHovered && hoveredIndex === index) && styles.hoveredText]}>OPEN</Text>
+                {/* <Image source={require('../assets/Image/backgroung picture.jpg')} style={styles.openIcon} /> */}
+              </View>
             </TouchableOpacity>
           </View>
         ))}
@@ -121,6 +126,15 @@ const styles = StyleSheet.create({
   },
   hoveredText: {
     color: 'black',
+  },
+  openContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  openIcon: {
+    width: 20,
+    height: 20,
+    marginLeft: 5,
   },
 
   taskBar: {
