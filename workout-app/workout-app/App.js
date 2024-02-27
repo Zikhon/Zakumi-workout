@@ -15,6 +15,7 @@ import Training3 from './Screens/Training3';
 import Training4 from './Screens/Training4';
 import Reports from './Screens/Reports';
 import User from './Screens/User';
+import Open from './Screens/Open';
 
 
 const Stack = createNativeStackNavigator();
@@ -78,6 +79,11 @@ export default function App() {
           options={{ headerShown: false }}
           name="Six"
           component={User}
+        />
+                 <Stack.Screen
+          options={{ headerShown: false }}
+          name="open"
+          component={Open}
         />
       </Stack.Navigator>
     </NavigationContainer>
