@@ -35,7 +35,7 @@ const Training1 = () => {
             <Text style={styles.dayText}>DAY {index + 1}</Text>
             <TouchableOpacity
               onPress={() => {
-                // Handle onPress for "OPEN" here
+            
               }}
               onMouseEnter={() => {
                 setIsHovered(true);
@@ -45,7 +45,7 @@ const Training1 = () => {
             >
               <View style={styles.openContainer}>
                 <Text style={[styles.statusText, (isHovered && hoveredIndex === index) && styles.hoveredText]}>OPEN</Text>
-                {/* <Image source={require('../assets/Image/backgroung picture.jpg')} style={styles.openIcon} /> */}
+
               </View>
             </TouchableOpacity>
           </View>
